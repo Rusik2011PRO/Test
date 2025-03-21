@@ -103,4 +103,32 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     setupEventListeners();
+
+    const burgerMenu = document.getElementById('burger-menu');
+    const mainNavigation = document.getElementById('main-navigation');
+    const swipeContainer = document.getElementById('swipe-container'); 
+
+    burgerMenu.addEventListener('click', () => {
+        mainNavigation.classList.toggle('active');
+    });
+
+    
+    let touchstartX = 0;
+    let touchendX = 0;
+
+    function checkSwipe() {
+        //
+        if (window.innerWidth <= 768 && !mainNavigation.classList.contains('active') && (touchendX - touchstartX) > 50) {
+            mainNavigation.classList.add('active');
+        }
+    }
+
+    swipeContainer.addEventListener('touchstart', e => {
+        touchstartX = e.changedTouches[0].screenX;
+    });
+
+    swipeContainer.addEventListener('touchend', e => {
+        touchendX = e.changedTouches[0].screenX;
+        checkSwipe();
+    });
 });
