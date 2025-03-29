@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Новости</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 </head>
 <body>
 
@@ -17,23 +19,23 @@
             </div>
 
             <nav class="navigation" id="main-navigation">
-                <div class="category">
-                    <a href="#">Обновления</a>
+                <div class="category"><a class="scroll"></a>
+                    <a href="#6">Новости дня</a>
                 </div>
-                <div class="category">
-                    <a href="#">Политика</a>
+                <div class="category"><a class="scroll"></a>
+                    <a href="#1">Политика</a>
                 </div>
-                <div class="category">
-                    <a href="#">Бизнес</a>
+                <div class="category"><a class="scroll"></a>
+                    <a href="#2">Бизнес</a>
                 </div>
-                <div class="category">
-                    <a href="#">Виды спорта</a>
+                <div class="category"><a class="scroll"></a>
+                    <a href="#3">Виды спорта</a>
                 </div>
-                <div class="category">
-                    <a href="#">Мир</a>
+                <div class="category"><a class="scroll"></a>
+                    <a href="#4">Мир</a>
                 </div>
-                <div class="category">
-                    <a href="#">Путешествия</a>
+                <div class="category"><a class="scroll"></a>
+                    <a href="#5">Путешествия</a>
                 </div>
             </nav>
 
@@ -51,7 +53,7 @@
                 <img src="images\Political debate-bro.png" alt="Политика">
             </div>
             <div class="news-content">
-                <h3>Политика</h3>
+                <div id="1" class=""><h3>Политика</h3></div>
                 <p>Вашингтон, Округ Колумбия – Сегодня утром сенатор от штата Громкий</p>
                 <p>представил в Конгрессе весьма необычный законопроект, предлагающий перейти на новую</p>
                 <p>систему измерения времени, основанную на спелости бананов. Согласно предложению,</p>
@@ -69,7 +71,7 @@
                 <img src="images\Business growth-pana.png" alt="Бизнес">
             </div>
             <div class="news-content">
-                <h3>Бизнес</h3>
+                <div id="2" class=""><h3>Бизнес</h3></div>
                 <p>“МОСКВА, 16 мая - Российская экономика демонстрирует неожиданный всплеск оптимизма</p>
                 <p>в бизнес-среде, напрямую связанный с феноменальным ростом популярности нейросетей,</p>
                 <p>предсказывающих будущее. Об этом заявили аналитики исследовательского центра “Глобус-Хрусталь".</p>
@@ -85,12 +87,31 @@
             </div>
         </div>
 
+                            </div>
+    </div>
+
+    <div class="slider-container">
+        <div class="slider">
+            <div><img src="images/news1.jpg" alt="Slide 1"></div>
+            <div><img src="images/news2.jpg" alt="Slide 2"></div>
+            <div><img src="images/news3.jpg" alt="Slide 3"></div>
+        </div>
+
+        <div class="slider-nav">
+            <div><a data-slide-index="0" href="#"><img src="images/news1_min.jpg" alt="Slide 1 Min"></a></div>
+            <div><a data-slide-index="1" href="#"><img src="images/news2_min.jpg" alt="Slide 2 Min"></a></div>
+            <div><a data-slide-index="2" href="#"><img src="images/news3_min.jpg" alt="Slide 3 Min"></a></div>
+        </div>
+    </div>
+
+    <div class="section">
+
         <div class="section">
             <div class="image-container">
                 <img src="images\Sport family-amico.png" alt="Виды спорта">
             </div>
             <div class="news-content">
-                <h3>Виды спорта</h3>
+                <div id="3" class=""><h3>Виды спорта</h3></div>
                 <p>ЦЮРИХ, Швейцария – Сенсационное заявление сделали ученые из Швейцарского</p>
                 <p>федерального технологического института. По результатам масштабного исследования,</p>
                 <p>регулярная игра в нарды значительно повышает когнитивные способности, координацию и</p>
@@ -109,7 +130,7 @@
                 <img src="images\Earth and Moon-cuate.png" alt="Мир">
             </div>
             <div class="news-content">
-                <h3>Мир</h3>
+                <div id="4" class=""><h3>Мир</h3></div>
                 <p>Ближайшая к Южному полю станция “Восток”, Антарктида - Группа исследователей,</p>
                 <p>работающих на российской антарктической станции “Восток”, сделала невероятное</p>
                 <p>открытие: они обнаружили древний город, полностью построенный из гигантских,</p>
@@ -127,7 +148,7 @@
                 <img src="images\travel selfie-bro.png" alt="Путешествия">
             </div>
             <div class="news-content">
-                <h3>Путешествия</h3>
+                <div id="5" class=""><h3>Путешествия</h3></div>
                 <p>Лондон, Великобритания - Вчера в аэропорту Хитроу произошел инцидент, который может</p>
                 <p>навсегда изменить наше представление о реальности. Группа британских ученых,</p>
                 <p>проводивших рутинные исследования в зоне регистрации, случайно обнаружила портал в</p>
@@ -142,7 +163,7 @@
     </main>
 
     <section class="daily-news">
-        <h2>Новости дня</h2>
+        <div id="6" class=""><h2>Новости дня</h2></div>
         <ul>
             <li>Сегодня прогноз погоды: будет дождливо и довольно тепло.</li>
             <li>Новости на неделе: сегодня была авария на Шоссе 22 по данным 1 пострадавший.</li>
@@ -162,7 +183,7 @@
             <form id="registration-form">
                 <label for="username">Имя пользователя:</label>
                 <input type="text" id="username" name="username" required>
-                <label for="password">Паро</form>
+                <label for="password">Пароль</form>
         </div>
     </div>
 

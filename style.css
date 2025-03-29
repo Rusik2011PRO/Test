@@ -33,6 +33,7 @@ header {
 }
 
 .navigation {
+    position: fixed;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -238,3 +239,38 @@ footer {
         text-align: left; 
     }
 }}
+
+.slider-container {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.slider img {
+    width: 2200px;
+    height: 700px;
+    display: block;
+}
+
+.slider-nav {
+    text-align: center;
+}
+
+.slider-nav > div {
+    display: inline-block;
+    margin: 0 5px;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+.slider-nav img {
+    width: 80px;
+    height: auto;
+    display: block;
+}
+
+.slider-nav > div.active {
+    border-color: #333;
+}
