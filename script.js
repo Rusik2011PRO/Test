@@ -106,18 +106,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const burgerMenu = document.getElementById('burger-menu');
     const mainNavigation = document.getElementById('main-navigation');
-    const swipeContainer = document.getElementById('swipe-container'); 
+    const swipeContainer = document.getElementById('swipe-container');
 
     burgerMenu.addEventListener('click', () => {
         mainNavigation.classList.toggle('active');
     });
 
-    
     let touchstartX = 0;
     let touchendX = 0;
 
     function checkSwipe() {
-        //
         if (window.innerWidth <= 768 && !mainNavigation.classList.contains('active') && (touchendX - touchstartX) > 50) {
             mainNavigation.classList.add('active');
         }

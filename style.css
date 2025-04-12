@@ -17,7 +17,6 @@ header {
     position: relative;
 }
 
-
 .burger-menu {
     display: none;
     flex-direction: column;
@@ -123,13 +122,6 @@ footer {
     padding: 10px;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-}
-
 .overlay {
     position: fixed;
     top: 0;
@@ -194,9 +186,10 @@ footer {
 
 @media (max-width: 768px) {
     .top-row {
-        flex-direction: row; 
-        justify-content: space-between; 
-        align-items: center; 
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     .burger-menu {
         display: flex;
@@ -204,73 +197,86 @@ footer {
     }
 
     .navigation {
-        display: none; 
-        position: absolute; 
-        top: 100%; 
+        display: none;
+        position: absolute;
+        top: 100%;
         right: 0;
-        width: 60%; 
+        width: 60%;
         background-color: #fff;
         flex-direction: column;
-        align-items: flex-start; 
+        align-items: flex-start;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         padding: 10px;
         box-sizing: border-box;
-        transform: translateX(100%); 
+        transform: translateX(100%);
         transition: transform 0.3s ease;
-        z-index: 500; 
+        z-index: 500;
     }
 
     .navigation.active {
-        display: flex; 
-        transform: translateX(0); 
+        display: flex;
+        transform: translateX(0);
     }
 
     .category {
-        text-align: left; 
+        text-align: left;
         margin: 5px 0;
     }
 
     .category a {
-        display: block; 
+        display: block;
         padding: 8px 12px;
     }
 
     #user-info {
-        text-align: left; 
+        text-align: left;
     }
-}}
+}
 
 .slider-container {
-    margin: 20px 0;
-    padding: 10px;
+    margin: 10px 0;
+    padding: 5px;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
+    overflow: hidden;
 }
 
 .slider img {
-    width: 2200px;
-    height: 700px;
+    width: 65%;
+    height: 450px;
     display: block;
 }
 
 .slider-nav {
     text-align: center;
+    margin-top: 5px;
 }
 
 .slider-nav > div {
     display: inline-block;
-    margin: 0 5px;
+    margin: 0 3px;
     border: 2px solid #fff;
     cursor: pointer;
 }
 
 .slider-nav img {
-    width: 80px;
+    width: 50px;
     height: auto;
     display: block;
 }
 
 .slider-nav > div.active {
     border-color: #333;
+}
+
+@media (max-width: 768px) {
+    .slider-container {
+        margin: 5px;
+        padding: 2px;
+    }
+
+    .slider-nav img {
+        width: 40px;
+    }
 }
